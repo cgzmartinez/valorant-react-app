@@ -7,6 +7,7 @@ const Footer = () => {
           Games, Valorant, Valorant-API, and all associated properties are
           trademarks or registered trademarks of Riot Games, Inc.
         </p>
+        <div></div>
       </div>
     </div>
   )
