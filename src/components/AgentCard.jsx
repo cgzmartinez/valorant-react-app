@@ -8,11 +8,6 @@ const AgentCard = ({ agent }) => {
     setShowModal(true)
   }
 
-  const className =
-    agent.displayName === 'KAY/O'
-      ? 'pt-7 text-white block text-[20px] bg-none italic font-bold uppercase'
-      : 'pt-7 text-white block text-[40px] bg-none italic font-bold uppercase'
-
   return (
     <div className="relative flex bg-clip-border border-b-2 border-white/50 rounded-xl bg-gradient-to-r from-[#454647] to-[#4e3739] w-full max-w-[48rem] flex-row hover:-translate-y-2 duration-200 cursor-pointer">
       <div
@@ -20,7 +15,9 @@ const AgentCard = ({ agent }) => {
         onClick={handleClick}
       >
         <div className="p-5 mb-5 mr-5 mt-5">
-          <h2 className={className}>{agent.displayName}</h2>
+          <h2 className="pt-7 text-white block text-[40px] whitespace-nowrap bg-none italic font-bold uppercase">
+            {agent.displayName}
+          </h2>
           <h1 className="flex pt-2 font-thin uppercase text-gray-400 text-[15px]">
             {agent.role.displayName}
           </h1>
