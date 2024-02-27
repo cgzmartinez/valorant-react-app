@@ -19,7 +19,7 @@ const WeaponsCard = ({ weapon }) => {
             {weapon.displayName}
           </h2>
         </div>
-        <div className="w-2/3 m-0 overflow-hidden bg-clip-border rounded-xl">
+        <div className="w-2/3 m-0 overflow-hidden pr-2 bg-clip-border rounded-xl">
           <img
             className="w-[170px] h-full object-cover"
             src={weapon.displayIcon}
