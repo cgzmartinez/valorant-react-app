@@ -3,8 +3,8 @@ import { Dialog, DialogHeader, DialogBody } from '@material-tailwind/react'
 
 const AgentModal = ({ onClose, agent }) => {
   return ReactDOM.createPortal(
-    <Dialog size="xs" open={Boolean(agent)}>
-      <div className="bg-[#FD4556] rounded-t-lg rounded-b-[25px]">
+    <Dialog size="xs" open={Boolean(agent)} className="rounded-2xl">
+      <div className="bg-[#FD4556] rounded-t-2xl rounded-b-[25px]">
         <DialogHeader>
           <div className="absolute top-0 right-0 pr-5 pt-5 z-10">
             <button className=" text-white text-xl pr-2" onClick={onClose}>
@@ -12,12 +12,14 @@ const AgentModal = ({ onClose, agent }) => {
             </button>
           </div>
         </DialogHeader>
-        <img
-          className="pb-5w-[300px] h-full"
-          src={agent.fullPortrait}
-          alt={agent.displayName + 'portrait'}
-        />
-        <h1 className="flex items-center justify-center tracking-tighter font-bold text-[50px] text-white uppercase">
+        <div className="flex justify-center items-center">
+          <img
+            className="pb-5 w-auto h-[300px]"
+            src={agent.fullPortrait}
+            alt={agent.displayName + 'portrait'}
+          />
+        </div>
+        <h1 className="flex items-center justify-center tracking-tighter font-bold text-[30px] text-white uppercase">
           {agent.displayName}
         </h1>
         <p className="pb-5 flex items-center justify-center font-light text-white">

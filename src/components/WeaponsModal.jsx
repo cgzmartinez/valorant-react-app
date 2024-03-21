@@ -3,8 +3,8 @@ import { Dialog, DialogHeader, DialogBody } from '@material-tailwind/react'
 
 const WeaponsModal = ({ onClose, weapon }) => {
   return ReactDOM.createPortal(
-    <Dialog size="xs" open={weapon}>
-      <div className="bg-[#FD4556] rounded-t-lg rounded-b-[25px]">
+    <Dialog size="xs" open={weapon} className="rounded-2xl">
+      <div className="bg-[#FD4556] rounded-t-2xl rounded-b-[25px]">
         <DialogHeader>
           <div className="absolute top-0 right-0 pr-5 pt-5 z-10">
             <button className=" text-white text-xl pr-2" onClick={onClose}>
@@ -13,11 +13,11 @@ const WeaponsModal = ({ onClose, weapon }) => {
           </div>
         </DialogHeader>
         <img
-          className="p-10"
+          className="px-5 py-3"
           src={weapon.displayIcon}
           alt={weapon.displayName + 'portrait'}
         />
-        <h1 className="flex pb-2 items-center justify-center tracking-tighter font-bold text-[50px] text-white uppercase">
+        <h1 className="flex pb-2 items-center justify-center tracking-tighter font-bold text-[30px] text-white uppercase">
           {weapon.displayName}
         </h1>
       </div>
@@ -25,7 +25,7 @@ const WeaponsModal = ({ onClose, weapon }) => {
         <DialogBody className="h-[10rem] overflow-scroll no-scrollbar">
           <h3 className="text-lg font-bold pb-5">Weapon Stats</h3>
           {weapon.weaponStats && (
-            <ul className="grid grid-cols-2 gap-10 text-[12px]">
+            <ul className="grid grid-cols-1 py-2 gap-5 text-[12px]">
               {Object.entries(weapon.weaponStats).map(
                 ([statName, statValue]) =>
                   statValue !== null &&

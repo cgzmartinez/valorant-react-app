@@ -11,9 +11,9 @@ const WeaponsPage = () => {
   }, [])
 
   return (
-    <div className="mt-[160px] px-5">
+    <div className="mt-[113px] md:mt-[105px] mx-5">
       <div className="flex justify-center items-center">
-        <ul className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-[50px] justify-center items-center h-[527px] rounded-b-xl overscroll-auto overflow-auto no-scrollbar">
+        <ul className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-[50px] justify-center items-center h-screen rounded-b-xl overscroll-auto overflow-auto no-scrollbar">
           {weapons.map((weapon) => (
             <WeaponsCard key={weapons.uuid} weapon={weapon} />
           ))}
